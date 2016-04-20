@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require_relative 'routes/conference'
 require_relative 'routes/token'
+require_relative 'lib/twilio_capability'
 
 ENV['RACK_ENV'] ||= 'development'
 

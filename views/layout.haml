@@ -1,9 +1,21 @@
 !!!
 %html
   %head
-    %title Warm Transfer
+    %title Warm Transfer Sinatra
     %link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css")
     %link(rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css")
+    %link(rel="stylesheet" href="stylesheets/main.css")
   %body
-    #content
+    %section#main.container
+      %nav.navbar.navbar-default
+        %a.navbar-brand(href="/") Warm Transfer Sinatra
+
       = yield
+
+    %footer.container
+      Made with <i class="fa fa-heart"></i> by your pals <a href="http://www.twilio.com">@twilio</a>
+
+    %script(src="//code.jquery.com/jquery-2.2.1.min.js")
+    %script(src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js")
+    %script(src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js")
+    %script(src="javascripts/app.js")
