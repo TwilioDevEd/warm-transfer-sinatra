@@ -2,7 +2,8 @@ module Routes
   module Token
     def self.registered(app)
       app.post '/:agent_id/token' do
-        TwilioCapability.generate(params[:agent_id])
+        agent_id = params[:agent_id]
+        json :token => TwilioCapability.generate(agent_id), :agentId => agent_id
       end
     end
   end

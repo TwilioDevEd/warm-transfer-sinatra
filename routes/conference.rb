@@ -7,9 +7,10 @@ module Routes
       app.post '/conference/connect/client' do
         agent_id = 'agent1'
         conference_id = params[:CallSid]
+        base_url = RequestHelper.base_url request
         Caller.call_agent(
           agent_id,
-          "/conference/#{conference_id}/connect/agent1/"
+          "#{base_url}/conference/#{conference_id}/connect/agent1/"
         )
 
         twiml = TwimlGenerator.generate_connect_conference(
@@ -50,9 +51,10 @@ module Routes
         agent_id = params[:agent_id]
         conference_id = ActiveCall.first(agent_id: agent_id).conference_id
 
+        base_url = RequestHelper.base_url request
         Caller.call_agent(
           'agent2',
-          "/conference/#{conference_id}/connect/agent2/"
+          "#{base_url}/conference/#{conference_id}/connect/agent2/"
         )
       end
 

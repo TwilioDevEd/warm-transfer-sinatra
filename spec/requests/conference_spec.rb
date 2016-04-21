@@ -18,7 +18,7 @@ describe 'Conference routes'do
         .and_return('<Response></Response>')
   
       expect(Caller).to receive(:call_agent)
-        .with("agent1", "/conference/#{call_sid}/connect/agent1/")
+        .with("agent1", "http://example.org/conference/#{call_sid}/connect/agent1/")
         .once
       post 'conference/connect/client', CallSid: call_sid
       expect(last_response).to be_ok
@@ -56,7 +56,7 @@ describe 'Conference routes'do
     it 'creates a call to agent 2' do
       ActiveCall.create(agent_id: 'agent1', conference_id: conference_id)
       expect(Caller).to receive(:call_agent)
-        .with('agent2', "/conference/#{conference_id}/connect/agent2/")
+        .with('agent2', "http://example.org/conference/#{conference_id}/connect/agent2/")
         .once
 
       post "conference/agent1/call"

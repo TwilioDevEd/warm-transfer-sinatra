@@ -1,9 +1,13 @@
 require 'sinatra/base'
+require "sinatra/json"
 require 'sinatra/config_file'
 require_relative 'helpers/datamapper_helper'
+require_relative 'helpers/request_helper'
 require_relative 'routes/conference'
 require_relative 'routes/token'
 require_relative 'lib/twilio_capability'
+require_relative 'lib/twiml_generator'
+require_relative 'lib/caller'
 
 ENV['RACK_ENV'] ||= 'development'
 

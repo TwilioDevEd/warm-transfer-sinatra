@@ -17,7 +17,7 @@ $(function() {
   function fetchToken(agentId) {
     $.post('/' + agentId + '/token', {}, function(data) {
       currentAgentId = data.agentId;
-      connectClient(data.token)
+      connectClient(data.token);
     }, 'json');
   }
 
