@@ -30,13 +30,14 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
 
  Run `source .env` to export the environment variables
 
-1. Create database and run migrations
+1. Create development and test databases
 
    _Make sure you have installed [PostgreSQL](http://www.postgresql.org/). If on
    a Mac, I recommend [Postgres.app](http://postgresapp.com)_.
 
    ```bash
-   $ bundle exec rake db:setup
+   $ createdb automated_survey_sinatra
+   $ createdb automated_survey_sinatra_test
    ```
 
 1. Make sure the tests succeed
