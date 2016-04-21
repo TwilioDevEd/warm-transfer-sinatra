@@ -36,8 +36,8 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
    a Mac, I recommend [Postgres.app](http://postgresapp.com)_.
 
    ```bash
-   $ createdb automated_survey_sinatra
-   $ createdb automated_survey_sinatra_test
+   $ createdb warm_transfer_sinatra
+   $ createdb warm_transfer_sinatra_test
    ```
 
 1. Make sure the tests succeed
