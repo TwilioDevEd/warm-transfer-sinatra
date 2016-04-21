@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require "sinatra/json"
 require 'sinatra/config_file'
+require 'tilt/haml'
 require_relative 'helpers/datamapper_helper'
 require_relative 'helpers/request_helper'
 require_relative 'routes/conference'
