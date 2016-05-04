@@ -5,20 +5,20 @@
 
 This project is built using the [Sinatra](http://www.sinatrarb.com/) web framework.
 
-1. First clone this repository and `cd` into it
+1. First clone this repository and `cd` into it.
 
    ```bash
    $ git clone git@github.com:TwilioDevEd/warm-transfer-sinatra.git
    $ cd warm-transfer-sinatra
    ```
 
-1. Install the dependencies
+1. Install the dependencies.
 
    ```bash
    $ bundle
    ```
 
-1. Copy the sample configuration file and edit it to match your configuration
+1. Copy the sample configuration file and edit it to match your configuration.
 
   ```bash
   $ cp .env.example .env
@@ -40,12 +40,13 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
    $ createdb warm_transfer_sinatra_test
    ```
 
-1. Make sure the tests succeed
+1. Make sure the tests succeed.
+
    ```bash
    $ bundle exec rspec
    ```
 
-1. Run the server
+1. Run the server.
 
    ```bash
    $ bundle exec rackup
@@ -86,6 +87,7 @@ That's it!
    **Notes:**
    * Remember to use your SSL enabled ngrok URL `https`.
    Failing to do this won't allow you to receive incoming calls.
+
    * The application has been tested with [Chrome](https://www.google.com/chrome/)
    and [Firefox](https://firefox.com). Safari is not supported at the moment.
 
@@ -93,7 +95,7 @@ That's it!
    `Connect as Agent 2`. Now both agents are waiting for an incoming call.
 
 1. Dial your [Twilio Number](https://www.twilio.com/user/account/phone-numbers/incoming)
-   to star a call with `Agent 1`. Your `TWILIO_NUMBER`
+   to start a call with `Agent 1`. Your `TWILIO_NUMBER`
    environment variable was set when configuring the application to run.
 
 1. When `Agent 1` answers the call from the client, he/she can dial `Agent 2` in
