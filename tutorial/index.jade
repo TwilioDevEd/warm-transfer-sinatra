@@ -11,7 +11,7 @@
 
       Warm transfer eliminates this problem. Using Twilio powered
       warm transfers your agents will have the ability
-      to dial in another agent in realtime.
+      to dial in another agent in real-time.
 
       Here is how it works at a high level:
 
@@ -47,7 +47,7 @@
       will dial when they want to talk to a support agent.
       ![Configure Voice](//howtodocs.s3.amazonaws.com/twilio-number-config-all-med.gif)
 
-      This should be the public-facing url or your app in production.
+      This should be the public-facing URL or your app in production.
 
   .step(
     data-title="Connecting as a Support Agent",
@@ -120,7 +120,7 @@
       [here](//github.com/TwilioDevEd/warm-transfer-sinatra/blob/master/lib/twiml_generator.rb#L12-L17)
 
       We use the client's [`CallSid`](//www.twilio.com/help/faq/voice/what-is-a-call-sid) as the conference identifier. Since all participants
-      need this identifier to join the conference we'll need to store it in a databse so that we can grab it when we dial the second agent in later.
+      need this identifier to join the conference we'll need to store it in a database so that we can grab it when we dial the second agent in later.
 
   .step(
     data-title="Providing TwiML Instruction For The Client",
@@ -148,10 +148,10 @@
 
       1. `to`  : The agent web client's identifier (`agent1` or `agent2`)
 
-      1. `url` : A url to ask for TwiML instructions when the call connects
+      1. `url` : A URL to ask for TwiML instructions when the call connects
 
       Once the agent answers the call in the web client, a request is made to the
-      callback url instructing the agent's call to join the conference room where
+      callback URL instructing the agent's call to join the conference room where
       the client is already waiting.
 
   .step(
