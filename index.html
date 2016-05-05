@@ -53,7 +53,7 @@ will dial when they want to talk to a support agent.
 <li>A unique identifier (string) for each agent</li>
 <li>Event listeners to handle different Twilio-triggered events</li>
 </ul>
-<p>In the next step we&#39;ll take a closer look into capability token
+<p>In the next step we&#39;ll take a closer look on capability token
 generation.</p>
 <hr>
 <p><strong>See also:</strong></p>
@@ -62,7 +62,7 @@ generation.</p>
 <li><a href="//www.twilio.com/docs/quickstart/client">Twilio Client Quickstart</a></li>
 <li><a href="https://www.twilio.com/docs/quickstart/ruby/twiml">TwiML response with the twilio-ruby library</a></li>
 </ul>
-</div><div data-title="Generate a Capability Token" data-file="lib/twilio_capability.rb" class="step"><h2 id="generate-a-capability-token">Generate a Capability Token</h2>
+</div><div data-title="Generating a Capability Token" data-file="lib/twilio_capability.rb" class="step"><h2 id="generating-a-capability-token">Generating a Capability Token</h2>
 <p>In order to connect the <a href="//www.twilio.com/webrtc">Twilio Voice Web Client</a>
 we need a <a href="//www.twilio.com/docs/client/capability-tokens">capability token</a>.</p>
 <p>To allow incoming connections through the web client an identifier must
@@ -84,9 +84,9 @@ a POST request asking for instructions. We&#39;ll use <a href="//www.twilio.com/
 to join a conference room and the Twilio REST API client to start a call with
 the first agent, so he can join the same conference.</p>
 <p>When providing instructions to the client, we also provide a
-<a href="//www.twilio.com/docs/api/twiml/conference#attributes-waitUrl"><code>waitUrl</code></a>,
-which in our case is another end point of our application. This returns more TwiML
-to <a href="//www.twilio.com/docs/api/twiml/say">say</a> welcome to the user, and also
+<a href="//www.twilio.com/docs/api/twiml/conference#attributes-waitUrl"><code>waitUrl</code></a>.
+This URL is another end point of our application. This returns more TwiML
+to <a href="//www.twilio.com/docs/api/twiml/say">say</a> welcome to the user and also
 <a href="//www.twilio.com/docs/api/twiml/play">play</a> some music while on hold.
 Take a look at the code
 <a href="//github.com/TwilioDevEd/warm-transfer-sinatra/blob/master/lib/twiml_generator.rb#L12-L17">here</a></p>
@@ -112,7 +112,7 @@ receives a hash with the following keys:</p>
 <p>Once the agent answers the call in the web client, a request is made to the
 callback URL instructing the agent&#39;s call to join the conference room where
 the client is already waiting.</p>
-</div><div data-title="Dial Second Agent Into the Call" data-file="routes/conference.rb" data-highlight="50-59" class="step"><h2 id="dial-second-agent-into-the-call">Dial Second Agent Into the Call</h2>
+</div><div data-title="Dialing the Second Agent Into the Call" data-file="routes/conference.rb" data-highlight="50-59" class="step"><h2 id="dialing-the-second-agent-into-the-call">Dialing the Second Agent Into the Call</h2>
 <p>When the client and the first agent are both in the call we are ready to
 perform a <em>warm  transfer</em> to a second agent. The first agent makes a
 request passing its <code>identifier</code> to allow us to look for the <code>conference_id</code>
@@ -126,7 +126,7 @@ participants received when joining the call. Both, agent one and two, have
 <code>startConferenceOnEnter</code> set to <code>true</code>. This means the conference will start when
 any of them joins the call. For the client calling and for agent two, <code>endConferenceOnExit</code>
 is set to true. This causes the call to end when either of these two participants
-drop the call.</p>
+drops the call.</p>
 </div><div class="step"><h2 id="where-to-next-">Where to next?</h2>
 <p>That&#39;s it! We have just implemented warm transfers using Ruby and Sinatra.
 Now your clients won&#39;t get disconnect from support calls while they are been
@@ -139,7 +139,7 @@ tutorials:</p>
 <p>Learn how to use Twilio Client to make browser-to-phone and browser-to-browser calls with ease.</p>
 <p>Thanks for checking out this tutorial! If you have any feedback
 to share with us, we&#39;d love to hear it.
-<a href="//www.twilio.com/help/contact">Contact support</a> to let us know what you think.</p>
+<a href="mailto:deved-oss@twilio.com">Contact the Twilio Developer Education Team</a> to let us know what you think.</p>
 </div></div>
 <div class="saurus-files" style="display:none;"><textarea class="saurus-file" data-file="app.rb" data-mode="ruby">cmVxdWlyZSAnc2luYXRyYS9iYXNlJwpyZXF1aXJlICJzaW5hdHJhL2pzb24iCnJlcXVpcmUgJ3NpbmF0cmEvY29uZmlnX2ZpbGUnCnJlcXVpcmUgJ3RpbHQvaGFtbCcKcmVxdWlyZV9yZWxhdGl2ZSAnaGVscGVycy9kYXRhbWFwcGVyX2hlbHBlcicKcmVxdWlyZV9yZWxhdGl2ZSAnaGVscGVycy9yZXF1ZXN0X2hlbHBlcicKcmVxdWlyZV9yZWxhdGl2ZSAncm91dGVzL2NvbmZlcmVuY2UnCnJlcXVpcmVfcmVsYXRpdmUgJ3JvdXRlcy90b2tlbicKcmVxdWlyZV9yZWxhdGl2ZSAnbGliL3R3aWxpb19jYXBhYmlsaXR5JwpyZXF1aXJlX3JlbGF0aXZlICdsaWIvdHdpbWxfZ2VuZXJhdG9yJwpyZXF1aXJlX3JlbGF0aXZlICdsaWIvY2FsbGVyJwoKRU5WWydSQUNLX0VOViddIHx8PSAnZGV2ZWxvcG1lbnQnCgpyZXF1aXJlICdidW5kbGVyJwpCdW5kbGVyLnJlcXVpcmUgOmRlZmF1bHQsIEVOVlsnUkFDS19FTlYnXS50b19zeW0KCm1vZHVsZSBXYXJtVHJhbnNmZXIKICBjbGFzcyBBcHAgPCBTaW5hdHJhOjpCYXNlCiAgICByZWdpc3RlciBTaW5hdHJhOjpDb25maWdGaWxlCiAgICBjb25maWdfZmlsZSAnY29uZmlnL2FwcC55bWwnCiAgICBEYXRhTWFwcGVySGVscGVyLnNldHVwKHNldHRpbmdzLmRhdGFiYXNlX3VybCkKICAgIHNldCA6cm9vdCwgRmlsZS5kaXJuYW1lKF9fRklMRV9fKQogICAgcmVnaXN0ZXIgUm91dGVzOjpDb25mZXJlbmNlCiAgICByZWdpc3RlciBSb3V0ZXM6OlRva2VuCgogICAgZ2V0ICcvJyBkbwogICAgICBoYW1sIDpob21lCiAgICBlbmQKICBlbmQKZW5kCg==</textarea>
 <textarea class="saurus-file" data-file="routes/conference.rb" data-mode="ruby">bW9kdWxlIFJvdXRlcwogIG1vZHVsZSBDb25mZXJlbmNlCgogICAgQUdFTlRfV0FJVF9VUkwgPSAnaHR0cDovL3R3aW1sZXRzLmNvbS9ob2xkbXVzaWM/QnVja2V0PWNvbS50d2lsaW8ubXVzaWMuY2xhc3NpY2FsJwoKICAgIGRlZiBzZWxmLnJlZ2lzdGVyZWQoYXBwKQogICAgICBhcHAucG9zdCAnL2NvbmZlcmVuY2UvY29ubmVjdC9jbGllbnQnIGRvCiAgICAgICAgYWdlbnRfaWQgPSAnYWdlbnQxJwogICAgICAgIGNvbmZlcmVuY2VfaWQgPSBwYXJhbXNbOkNhbGxTaWRdCiAgICAgICAgYmFzZV91cmwgPSBSZXF1ZXN0SGVscGVyLmJhc2VfdXJsIHJlcXVlc3QKICAgICAgICBDYWxsZXIuY2FsbF9hZ2VudCgKICAgICAgICAgIGFnZW50X2lkLAogICAgICAgICAgIiN7YmFzZV91cmx9L2NvbmZlcmVuY2UvI3tjb25mZXJlbmNlX2lkfS9jb25uZWN0L2FnZW50MS8iCiAgICAgICAgKQoKICAgICAgICB0d2ltbCA9IFR3aW1sR2VuZXJhdG9yLmdlbmVyYXRlX2Nvbm5lY3RfY29uZmVyZW5jZSgKICAgICAgICAgIGNvbmZlcmVuY2VfaWQsCiAgICAgICAgICAnL2NvbmZlcmVuY2Uvd2FpdCcsCiAgICAgICAgICBmYWxzZSwKICAgICAgICAgIHRydWUKICAgICAgICApCgogICAgICAgIGNhbGwgPSBBY3RpdmVDYWxsLmZpcnN0X29yX2NyZWF0ZShhZ2VudF9pZDogYWdlbnRfaWQpCiAgICAgICAgY2FsbC5jb25mZXJlbmNlX2lkID0gY29uZmVyZW5jZV9pZAogICAgICAgIGNhbGwuc2F2ZSEKICAgICAgICBjb250ZW50X3R5cGUgJ3RleHQveG1sJwogICAgICAgIHR3aW1sCiAgICAgIGVuZAoKICAgICAgYXBwLnBvc3QgJy9jb25mZXJlbmNlLzpjb25mZXJlbmNlX2lkL2Nvbm5lY3QvYWdlbnQxLycgZG8KICAgICAgICBjb250ZW50X3R5cGUgJ3RleHQveG1sJwogICAgICAgIFR3aW1sR2VuZXJhdG9yLmdlbmVyYXRlX2Nvbm5lY3RfY29uZmVyZW5jZSgKICAgICAgICAgIHBhcmFtc1s6Y29uZmVyZW5jZV9pZF0sCiAgICAgICAgICBBR0VOVF9XQUlUX1VSTCwKICAgICAgICAgIHRydWUsCiAgICAgICAgICBmYWxzZQogICAgICAgICkKICAgICAgZW5kCgogICAgICBhcHAucG9zdCAnL2NvbmZlcmVuY2UvOmNvbmZlcmVuY2VfaWQvY29ubmVjdC9hZ2VudDIvJyBkbwogICAgICAgIGNvbnRlbnRfdHlwZSAndGV4dC94bWwnCiAgICAgICAgVHdpbWxHZW5lcmF0b3IuZ2VuZXJhdGVfY29ubmVjdF9jb25mZXJlbmNlKAogICAgICAgICAgcGFyYW1zWzpjb25mZXJlbmNlX2lkXSwKICAgICAgICAgIEFHRU5UX1dBSVRfVVJMLAogICAgICAgICAgdHJ1ZSwKICAgICAgICAgIHRydWUKICAgICAgICApCiAgICAgIGVuZAoKICAgICAgYXBwLnBvc3QgJy9jb25mZXJlbmNlLzphZ2VudF9pZC9jYWxsJyBkbwogICAgICAgIGFnZW50X2lkID0gcGFyYW1zWzphZ2VudF9pZF0KICAgICAgICBjb25mZXJlbmNlX2lkID0gQWN0aXZlQ2FsbC5maXJzdChhZ2VudF9pZDogYWdlbnRfaWQpLmNvbmZlcmVuY2VfaWQKCiAgICAgICAgYmFzZV91cmwgPSBSZXF1ZXN0SGVscGVyLmJhc2VfdXJsIHJlcXVlc3QKICAgICAgICBDYWxsZXIuY2FsbF9hZ2VudCgKICAgICAgICAgICdhZ2VudDInLAogICAgICAgICAgIiN7YmFzZV91cmx9L2NvbmZlcmVuY2UvI3tjb25mZXJlbmNlX2lkfS9jb25uZWN0L2FnZW50Mi8iCiAgICAgICAgKQogICAgICBlbmQKCiAgICAgIGFwcC5wb3N0ICcvY29uZmVyZW5jZS93YWl0JyBkbwogICAgICAgIGNvbnRlbnRfdHlwZSAndGV4dC94bWwnCiAgICAgICAgVHdpbWxHZW5lcmF0b3IuZ2VuZXJhdGVfd2FpdAogICAgICBlbmQKICAgIGVuZAogIGVuZAplbmQK</textarea>
