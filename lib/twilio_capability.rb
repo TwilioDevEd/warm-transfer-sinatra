@@ -2,9 +2,10 @@ module TwilioCapability
   def self.generate(agent_id)
     account_sid = ENV['TWILIO_ACCOUNT_SID']
     auth_token = ENV['TWILIO_AUTH_TOKEN']
-    capability = Twilio::JWT::Capability.new(account_sid, auth_token)
+    scope = Twilio::JWT::IncomingClientScope.new(agent_id)
+    capability = Twilio::JWT::ClientCapability.new(account_sid, auth_token,
+                                                   scopes: [scope])
 
-    capability.allow_client_incoming(agent_id)
-    capability.generate
+    ::JWT.decode capability.to_s, 'authToken', true, {:algorithm=>'HS256'}
   end
 end
