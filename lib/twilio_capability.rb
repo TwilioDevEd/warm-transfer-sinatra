@@ -6,6 +6,6 @@ module TwilioCapability
     capability = Twilio::JWT::ClientCapability.new(account_sid, auth_token,
                                                    scopes: [scope])
 
-    ::JWT.decode capability.to_s, 'authToken', true, {:algorithm=>'HS256'}
+    capability.to_jwt
   end
 end
