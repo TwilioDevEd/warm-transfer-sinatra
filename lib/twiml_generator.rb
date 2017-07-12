@@ -10,7 +10,7 @@ module TwimlGenerator
     response = Twilio::TwiML::VoiceResponse.new
     response.append(dial)
 
-    response.to_xml_str
+    response.to_s
   end
 
   def self.generate_wait
@@ -18,8 +18,8 @@ module TwimlGenerator
     response.say 'Thank you for calling. '\
       'Please wait in line for a few seconds. '\
       'An agent will be with you shortly.'
-    response.play 'http://com.twilio.music.classical.s3.amazonaws.com/BusyStrings.mp3'
+    response.play(url: 'http://com.twilio.music.classical.s3.amazonaws.com/BusyStrings.mp3')
 
-    response.to_xml_str
+    response.to_s
   end
 end
