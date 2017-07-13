@@ -7,7 +7,7 @@ gem 'nokogiri', '~> 1.6', '>= 1.6.7.2'
 gem 'pg'
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'twilio-ruby', '~> 5.0.0.rc26'
+gem 'twilio-ruby', '>= 5.0.0'
 
 group :test, :development do
   gem 'rspec'
