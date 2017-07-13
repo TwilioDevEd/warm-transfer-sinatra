@@ -8,20 +8,20 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
 1. First clone this repository and `cd` into it.
 
    ```bash
-   $ git clone git@github.com:TwilioDevEd/warm-transfer-sinatra.git
-   $ cd warm-transfer-sinatra
+   git clone git@github.com:TwilioDevEd/warm-transfer-sinatra.git
+   cd warm-transfer-sinatra
    ```
 
 1. Install the dependencies.
 
    ```bash
-   $ bundle
+   bundle
    ```
 
 1. Copy the sample configuration file and edit it to match your configuration.
 
   ```bash
-  $ cp .env.example .env
+  cp .env.example .env
   ```
 
  You can find your `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` in your
@@ -36,20 +36,20 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
    a Mac, I recommend [Postgres.app](http://postgresapp.com)_.
 
    ```bash
-   $ createdb warm_transfer_sinatra
-   $ createdb warm_transfer_sinatra_test
+   createdb warm_transfer_sinatra
+   createdb warm_transfer_sinatra_test
    ```
 
 1. Make sure the tests succeed.
 
    ```bash
-   $ bundle exec rspec
+   bundle exec rspec
    ```
 
 1. Run the server.
 
    ```bash
-   $ bundle exec rackup
+   bundle exec rackup
    ```
 
 1. Expose your application to the wider internet using [ngrok](http://ngrok.com). This step
@@ -57,7 +57,7 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
   localhost.
 
   ```bash
-  $ ngrok http 9292
+  ngrok http 9292
   ```
 
   Once ngrok is running, open up your browser and go to your ngrok URL. It will
