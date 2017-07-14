@@ -2,12 +2,12 @@ source 'https://rubygems.org'
 
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
-gem 'haml'
+gem 'haml', '4.0.7'
 gem 'nokogiri', '~> 1.8'
 gem 'pg', '0.20.0'
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'twilio-ruby', '~> 5.0.0.rc26'
+gem 'twilio-ruby', '>= 5.0.0'
 
 group :test, :development do
   gem 'rspec'
