@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
-gem 'haml', '4.0.7'
+gem 'haml', '5.1.2'
 gem 'nokogiri', '~> 1.8'
 gem 'pg', '0.20.0'
 gem 'sinatra'
