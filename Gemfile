@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'data_mapper'
-gem 'dm-postgres-adapter'
+gem 'data_mapper', '>= 1.2.0'
+gem 'dm-postgres-adapter', '>= 1.2.0'
 gem 'haml', '4.0.7'
 gem 'nokogiri', '~> 1.8'
 gem 'pg', '0.20.0'
