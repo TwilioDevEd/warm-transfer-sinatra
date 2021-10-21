@@ -1,5 +1,5 @@
 # Warm Transfer: Transfer support calls from one agent to another using Ruby and Sinatra
-[![Build Status](https://travis-ci.org/TwilioDevEd/warm-transfer-sinatra.svg)](https://travis-ci.org/TwilioDevEd/warm-transfer-sinatra)
+[![Build and test](https://github.com/TwilioDevEd/warm-transfer-sinatra/actions/workflows/build_test.yml/badge.svg)](https://github.com/TwilioDevEd/warm-transfer-sinatra/actions/workflows/build_test.yml)
 
 ## Local development
 
