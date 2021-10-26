@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'dotenv'
 gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'haml', '4.0.7'

@@ -1,4 +1,5 @@
-require 'sinatra/base'
+require 'dotenv'
+require 'sinatra'
 require "sinatra/json"
 require 'sinatra/config_file'
 require 'tilt/haml'
@@ -10,10 +11,16 @@ require_relative 'lib/twilio_capability'
 require_relative 'lib/twiml_generator'
 require_relative 'lib/caller'
 
-ENV['RACK_ENV'] ||= 'development'
+# Load environment configuration
+Dotenv.load
+
+# Set the environment after dotenv loads
+# Default to production
+environment = (ENV['APP_ENV'] || ENV['RACK_ENV'] || :production).to_sym
+set :environment, environment
 
 require 'bundler'
-Bundler.require :default, ENV['RACK_ENV'].to_sym
+Bundler.require :default, environment
 
 module WarmTransfer
   class App < Sinatra::Base

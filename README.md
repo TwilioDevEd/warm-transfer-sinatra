@@ -1,7 +1,7 @@
 # Warm Transfer: Transfer support calls from one agent to another using Ruby and Sinatra
 [![Build and test](https://github.com/TwilioDevEd/warm-transfer-sinatra/actions/workflows/build_test.yml/badge.svg)](https://github.com/TwilioDevEd/warm-transfer-sinatra/actions/workflows/build_test.yml)
 
-## Local development
+## Get started
 
 This project is built using the [Sinatra](http://www.sinatrarb.com/) web framework.
 
@@ -27,8 +27,6 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
  You can find your `TWILIO_ACCOUNT_SID` and `TWILIO_AUTH_TOKEN` in your
  [Twilio Account Settings](https://www.twilio.com/user/account/settings).
  You will also need a `TWILIO_NUMBER`, which you may find [here](https://www.twilio.com/user/account/phone-numbers/incoming).
-
- Run `source .env` to export the environment variables
 
 1. Create development and test databases
 
@@ -78,6 +76,14 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
 
 
 That's it!
+
+### Configure Development vs Production Settings
+
+By default, this application will run in production mode - stack traces will not be visible in the web browser. If you would like to run this application in development locally, change the `APP_ENV` variable in your `.env` file.
+
+`APP_ENV=development`
+
+For more about development vs production, visit [Sinatra's configuration page](http://sinatrarb.com/configuration.html).
 
 ## How to Demo
 
