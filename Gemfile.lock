@@ -58,6 +58,7 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.17)
       data_objects (= 0.10.17)
+    dotenv (2.7.6)
     faraday (0.12.1)
       multipart-post (>= 1.2, < 3)
     fastercsv (1.5.5)
@@ -122,6 +123,7 @@ DEPENDENCIES
   data_mapper
   database_cleaner
   dm-postgres-adapter
+  dotenv
   haml (= 4.0.7)
   nokogiri (~> 1.8)
   pg (= 0.20.0)
@@ -133,4 +135,4 @@ DEPENDENCIES
   twilio-ruby (>= 5.0.0)
 
 BUNDLED WITH
-   1.15.1
+   1.17.2
