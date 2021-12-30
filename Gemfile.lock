@@ -76,10 +76,10 @@ GEM
       mini_portile2 (~> 2.2.0)
     pg (0.20.0)
     public_suffix (2.0.5)
-    rack (2.0.3)
+    rack (2.0.7)
     rack-protection (2.0.0)
       rack
-    rack-test (0.7.0)
+    rack-test (1.1.0)
       rack (>= 1.0, < 3)
     rake (12.0.0)
     rspec (3.6.0)
