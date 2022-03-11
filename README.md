@@ -72,7 +72,7 @@ This project is built using the [Sinatra](http://www.sinatrarb.com/) web framewo
   http://9a159ccf.ngrok.io/conference/connect/client
   ```
 
-  ![Configure Voice](http://howtodocs.s3.amazonaws.com/twilio-number-config-all-med.gif)
+  [Learn how to configure your Twilio phone number for voice calls here](https://www.twilio.com/docs/voice/tutorials/warm-transfer-ruby-sinatra#setting-up-the-voice-web-hook)
 
 
 That's it!
