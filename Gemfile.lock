@@ -74,7 +74,7 @@ GEM
     mustermann (1.0.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
-    pg (0.20.0)
+    pg (1.4.0)
     public_suffix (2.0.5)
     rack (2.0.3)
     rack-protection (2.0.0)
@@ -126,7 +126,7 @@ DEPENDENCIES
   dotenv
   haml (= 4.0.7)
   nokogiri (~> 1.8)
-  pg (= 0.20.0)
+  pg (= 1.4.0)
   rack-test
   rake
   rspec
