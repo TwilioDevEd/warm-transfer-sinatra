@@ -16,7 +16,7 @@ end
 
 group :test do
   gem 'database_cleaner'
-  gem 'rack-test'
+  gem 'rack-test', '>= 2.0.0'
   gem 'rake'
   gem 'byebug'
 end
